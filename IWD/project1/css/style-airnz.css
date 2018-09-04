@@ -1,0 +1,457 @@
+@keyframes book-now-in {
+  from {
+    top: 70%;
+    opacity: 0.5;
+  }
+  to {
+    top: 47%;
+    opacity: 1;
+  }
+}
+@keyframes restart-slide-away {
+  from {
+    top: 47%;
+    opacity: 1;
+  }
+  to {
+    top: 20%;
+    opacity: 0;
+  }
+}
+@keyframes deals-up {
+  from {
+    font-size: 33px;
+  }
+  to {
+    font-size: 27px;
+  }
+}
+@keyframes mored-up {
+  to {
+    top: 25px;
+    left: 126px;
+    font-size: 20px;
+  }
+}
+@keyframes mored {
+  from {
+    opacity: 0.7;
+    margin-left: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@keyframes splash {
+  0% {
+    font-size: 10em;
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+  15% {
+    font-size: 4em;
+    filter: blur(0px);
+    opacity: 1;
+  }
+  60% {
+    font-size: 4em;
+    opacity: 1;
+  }
+  100% {
+    font-size: 4em;
+    opacity: 0;
+  }
+}
+@keyframes logo {
+  0% {
+    right: -40px;
+  }
+  100% {
+    right: 4px;
+  }
+}
+@keyframes my-name {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  30% {
+    right: 5px;
+    opacity: 1;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    right: 5px;
+    filter: blur(0px);
+  }
+}
+@keyframes logo-zoom {
+  from {
+    right: 4px;
+  }
+  to {
+    height: 52px;
+    width: 52px;
+    right: 13.7931px;
+    top: 17.52632px;
+  }
+}
+@keyframes circle {
+  0% {
+    height: 100px;
+    width: 100px;
+    left: 37.5%;
+    top: 34.98498%;
+    opacity: 0;
+  }
+  100% {
+    height: 210px;
+    width: 210px;
+    left: 23.75%;
+    top: 18.46847%;
+    opacity: 1;
+  }
+}
+@keyframes circle-big {
+  0% {
+    height: 100px;
+    width: 100px;
+    left: 37.5%;
+    top: 34.98498%;
+    opacity: 0;
+  }
+  100% {
+    height: 280px;
+    width: 280px;
+    left: 15%;
+    top: 7.95796%;
+    opacity: 1;
+  }
+}
+@keyframes country-in {
+  0% {
+    top: 0px;
+    font-size: 70px;
+    opacity: 0.4;
+    line-spacing: 3px;
+  }
+  100% {
+    top: 12px;
+    font-size: 35px;
+    opacity: 1;
+    line-spacing: 0px;
+  }
+}
+@keyframes country-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes simple-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes simple-fade-in-2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@keyframes change-bg {
+  from {
+    background-blend-mode: multiply;
+    background-color: transparent;
+  }
+  to {
+    background-color: black;
+    background-blend-mode: multiply;
+  }
+}
+@keyframes button-in {
+  to {
+    visibility: visible;
+  }
+}
+aside {
+  color: white;
+  font-family: sans-serif;
+}
+
+#advertisement {
+  height: 333px;
+  width: 400px;
+  overflow: hidden;
+  background: url("../img/beach.png");
+  background-size: cover;
+  color: white;
+  float: right;
+  position: relative;
+  animation: 0.5s 16.7s forwards change-bg;
+  border-radius: 7px;
+}
+
+#splash {
+  position: relative;
+  width: 600px;
+  left: -100px;
+  font-size: 10em;
+  font-family: sans-serif;
+  font-weight: bold;
+  line-height: 333px;
+  color: white;
+  padding-top: 2px;
+  text-align: center;
+  animation: 2s ease-in splash;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#logo {
+  position: absolute;
+  right: -40px;
+  top: 5.55px;
+  background: url("../img/airnz-logo-white.png");
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  animation: 0.5s 2s forwards logo, 0.5s 20.5s forwards logo-zoom;
+}
+
+#transp-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 30%;
+  top: 30%;
+  animation: 0.3s 2.4s forwards circle, 0.2s 5.7s forwards reverse circle, 0.3s 6s forwards circle, 0.2s 9.3s forwards reverse circle, 0.3s 9.6s forwards circle, 0.2s 12.9s forwards reverse circle, 0.3s 13.2s forwards circle-big, 0.2s 16.5s forwards reverse circle-big;
+  opacity: 0;
+}
+
+.circle-text {
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 32%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+}
+
+.circle-text .price {
+  font-size: 60px;
+  font-style: italic;
+}
+
+.circle-text .remark {
+  font-size: 12px;
+}
+
+#sale {
+  position: absolute;
+  top: 38%;
+  left: 26%;
+  text-align: center;
+  opacity: 0;
+  font-size: 32px;
+  color: white;
+  animation: 0.3s 13.2s forwards simple-fade-in, 0.1s 16.5s forwards reverse simple-fade-in;
+}
+
+#sale .islands {
+  font-size: 40px;
+  font-style: italic;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.country {
+  animation-name: country;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  color: white;
+  width: 400px;
+  font-family: sans-serif;
+  font-weight: bold;
+  opacity: 0;
+}
+
+#vanuatu {
+  animation: 0.3s 2.4s forwards country-in, 0.1s 5.7s forwards country-out;
+}
+
+#fiji {
+  animation: 0.3s 6s forwards country-in, 0.1s 9.3s forwards country-out;
+}
+
+#honolulu {
+  animation: 0.3s 9.6s forwards country-in, 0.1s 12.9s forwards country-out;
+}
+
+#vanuatu-text {
+  animation: 0.3s 2.4s forwards simple-fade-in, 0.1s 5.7s forwards reverse simple-fade-in;
+}
+
+#fiji-text {
+  animation: 0.3s 6s forwards simple-fade-in, 0.1s 9.3s forwards reverse simple-fade-in;
+}
+
+#honolulu-text {
+  animation: 0.3s 9.6s forwards simple-fade-in, 0.1s 12.9s forwards reverse simple-fade-in;
+}
+
+.footnote {
+  background-color: black;
+  height: 29.97px;
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  padding: 3px 0px;
+  font-family: sans-serif;
+  opacity: 0;
+}
+
+#footnote-vanuatu {
+  animation: 0.3s 2.4s forwards simple-fade-in, 0.1s 5.7s forwards reverse simple-fade-in;
+}
+
+#footnote-fiji {
+  animation: 0.3s 6s forwards simple-fade-in, 0.1s 9.3s forwards reverse simple-fade-in;
+}
+
+#footnote-honolulu {
+  animation: 0.3s 9.6s forwards simple-fade-in, 0.1s 12.9s forwards reverse simple-fade-in;
+}
+
+.moredeals {
+  position: absolute;
+  width: 400px;
+  top: 47%;
+  left: 70px;
+  font-size: 27px;
+  color: white;
+  animation: 0.5s 20.5s forwards mored-up;
+}
+
+#more {
+  animation: 0.3s 18s forwards mored;
+  opacity: 0;
+}
+
+#deals {
+  font-style: italic;
+  font-family: serif;
+  font-size: 33px;
+  font-weight: bold;
+  animation: 0.3s 18.3s forwards mored, 0.5s 20.5s forwards deals-up;
+  opacity: 0;
+}
+
+#everyday {
+  animation: 0.3s 18.6s forwards mored;
+  opacity: 0;
+}
+
+#last_message, #hurry {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+#hurry {
+  bottom: 166.5px;
+  opacity: 0;
+  left: 17%;
+  font-size: 25px;
+  letter-spacing: -1px;
+  animation: 0.5s 20.9s forwards simple-fade-in;
+}
+
+#last_message {
+  opacity: 0;
+  bottom: 7px;
+  left: 23%;
+  animation: 0.5s 20.9s forwards simple-fade-in-2;
+}
+
+#last_message img {
+  width: 25px;
+  margin-bottom: -3px;
+}
+
+#sen1 {
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+#sen2 {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+#booknowcircle-link {
+  display: block;
+  border-radius: 50%;
+}
+
+#booknowcircle {
+  display: block;
+  border-radius: 50%;
+  background-color: #8f257a;
+}
+
+#booknowcircle-link:hover {
+  background-color: rgba(150, 30, 130, 0.2);
+}
+
+#booknow, #booknowcircle, #booknowcircle-link {
+  position: absolute;
+  opacity: 0;
+  width: 115.94203px;
+  height: 115.94203px;
+  left: 35.50725%;
+  animation: 0.5s 20.9s forwards book-now-in;
+}
+
+#booknow {
+  padding-top: 38px;
+  letter-spacing: -1px;
+  line-height: 26px;
+  font-size: 29px;
+  text-align: center;
+}
+
+#myname {
+  position: absolute;
+  right: -100px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  top: 200px;
+  opacity: 0;
+  animation: 3s 22.2s forwards my-name;
+}
+
+#replay {
+  position: absolute;
+  top: 0;
+  right: 1;
+  visibility: hidden;
+  animation: 0.1s 22.5s forwards button-in;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: bold;
+}

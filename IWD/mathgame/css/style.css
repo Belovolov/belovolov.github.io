@@ -1,0 +1,127 @@
+html {
+	height: 100%;
+	background: radial-gradient(circle, #fff, #ccc);
+}
+
+#container {
+	border-radius: 10px;
+	background-color: #9dd2ea;
+	margin: 100px auto;
+	padding: 20px;
+	height: 400px;
+	width: 550px;
+	box-shadow: 0px 5px 1px 0px #00d2ea;
+	position: relative;
+}
+
+#score {
+	position: absolute;
+	background-color: #E2EF56;
+	box-shadow: 0px 5px 1px 0px #aaaa00;
+	padding: 11px;
+	left: 85%;
+}
+
+#correct {
+	position: absolute;
+	left: 45%;
+	padding: 11px;
+	opacity: 0;
+	background-color: #02CE07;
+	color: white;
+}
+
+#wrong {
+	position: absolute;
+	opacity: 0;
+	left: 45%;
+	padding: 11px;
+	background-color: #F81B10;
+	color: white;
+}
+
+#question {
+	height: 37%;
+	width: 80%;
+	background-color: #D0A7E3;
+	border-radius: 10px ;
+	margin: 50px auto 10px auto;
+	text-align: center;
+	font-size: 5em;
+	font-family: cursive, sans-serif;
+}
+
+#instruction {
+	height: 12%;
+	width: 80%;
+	background-color: #AF91D7;
+	border-radius: 10px ;
+	margin: 10px auto 10px auto;
+	text-align: center;
+	line-height: 45px;
+}
+#choices {
+	height: 20%;
+	width: 80%;
+	margin: 10px auto 10px auto;
+}
+.option {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: white;
+	margin-right: 29px;
+	text-align: center;
+	line-height: 70px;
+	box-shadow: 0px 3px 0px 0px #B6B6B6;
+	cursor: pointer;
+}
+.option:hover {
+	background-color: #52C9FB;
+	color: white;
+}
+
+.option:active {
+	margin-top: 5px;
+	box-shadow: none;
+}
+#box4 {
+	margin-right: 0;
+}
+
+#startreset {
+	width: 20%;
+	padding: 10px;
+	background-color: #E0EDFC;
+	color: black;
+	margin: 20px auto 10px auto;
+	text-align: center;
+	box-shadow: 0px 3px 0px 0px #B6B6B6;
+	cursor: pointer;
+}
+#startreset:active {
+	background-color: #93C4FC;
+}
+
+#timeremaining {
+	float: right;
+	left: 70%;
+	top: 88%;
+	position: absolute;
+	background-color: #90EE81;
+	padding: 10px;
+	display: none;
+}
+
+#gameover {
+	background: linear-gradient(#FE2D2D, #F89B17);
+	position: absolute;
+	left: 8%;
+	top:20%;
+	height: 180px;
+	width: 495px;
+	z-index: 2;
+	text-align: center;
+	font-size: 2em;
+	display: none;
+}

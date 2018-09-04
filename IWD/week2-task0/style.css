@@ -1,0 +1,130 @@
+body {
+	font-family: "Monospace", "Lucida Console";
+}
+
+#outsideBox {
+	width: 600px;
+	height: 150px;
+	background-color: lightblue;
+	animation-name: bgcolor;
+	animation-duration: 6s;
+	animation-delay: 30s;
+}
+
+#greeting {
+	font-size: 65px;
+	margin-left: 30px;
+	color: #8600b3;
+	animation-name: greetingMove;
+	animation-duration: 8s;
+}
+
+#mainText {
+	font-size: 25px;
+	float: right;
+	color: lightblue;
+	animation-name: textMove;
+	animation-duration: 7s;
+	animation-delay: 5s;
+}
+
+#daisy {
+	position: absolute;
+	left: -70px;
+	top: 75px;
+	margin-left: 10px1;
+	animation-name: moveDaisy;
+	animation-duration: 10s;
+	animation-delay: 10s;
+	animation-iteration-count: 2;
+}
+
+#lirycs {
+	font-size: 20px;
+	color: #4d16ff;
+	position: absolute;
+	left: -200px;
+	top: 80px;
+	animation-name: moveLink;
+	animation-duration: 6s;
+	animation-delay: 30s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes greetingMove {
+	0% {
+		margin-left: -250px;
+		font-size: 65px;
+	}
+	50% {
+		margin-left: 130px;
+		font-size: 90px;
+	}
+	100% {
+		margin-left: 30px;
+		font-size: 65px;
+	}
+}
+
+@keyframes textMove {
+	0% {
+		font-size: 25px;
+	}
+	50% {
+		font-size: 70px;
+		color: blue;
+	}
+	100% {
+		font-size: 25px;
+	}
+}
+
+@keyframes bgcolor {
+	0% {
+		background-color: lightblue;
+	}
+	50% {
+		background-color: blue;
+	}
+	100% {
+		background-color: lightblue;
+	}
+}
+
+@keyframes moveDaisy {
+	0% {
+		margin-left: -70px;
+		transform: rotate(20deg);
+	}
+	10% {
+		margin-left: 30px;
+		transform: rotate(40deg);
+	}
+	50% {
+		margin-left: 380px;
+		transform: rotate(180deg);
+	}
+	90% {
+		margin-left: 30px;
+		transform: rotate(320deg);
+	}
+	100% {
+		margin-left: -10px;
+		transform: rotate(360deg);	
+	}
+}
+
+@keyframes moveLink {
+	0% {
+		top: 80px;
+		left: 50px;
+	}
+	50% {
+		top: 100px;
+		left: 350px;
+	}
+	100% {
+		top: 80px;
+		left: 50px;
+	}
+}

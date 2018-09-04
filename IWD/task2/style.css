@@ -1,0 +1,8 @@
+body {
+  background-color: grey;
+}
+#calculation {
+	/*background-color: lightcoral;*/
+	padding: 10px;
+	margin-bottom: 10px;
+}

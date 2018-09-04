@@ -1,0 +1,12 @@
+#sandbox {
+	margin: 20px 0 20px 0;
+	background-color: black;
+	color: white;
+	width: 350px;
+	height: 100px;
+	font-size: 20px;
+}
+
+#controls {
+	line-height: 2;
+}

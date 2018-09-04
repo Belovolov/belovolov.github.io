@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="product_list.css"?>
+<CourseList>
+	<Course>
+		<CourseName>Internet&amp;Website Development</CourseName>
+		<CourseCode>ISCG6420</CourseCode>
+		<Status>Current</Image>		
+	</Course>	
+	<Course>
+		<CourseName>Database Design&amp;Development</CourseName>
+		<CourseCode>ISCG6420</CourseCode>
+		<Status>Current</Image>		
+	</Course>	
+	<Course>
+		<ProductName>soda</ProductName>
+		<Image>soda.jpg</Image>
+		<Price>2</Price>		
+	</Course>	
+	<Course>
+		<ProductName>bread</ProductName>
+		<Image>bread.jpg</Image>
+		<Price>8</Price>		
+	</Course>
+	<Product>
+		<ProductName>butter</ProductName>
+		<Image>butter.jpg</Image>
+		<Price>2</Price>		
+	</Product>
+	<Product>
+		<ProductName>agria potatoes</ProductName>
+		<Image>agria_potatoes.jpg</Image>
+		<Price>20</Price>		
+	</Product>
+</CourseList>

@@ -1,0 +1,237 @@
+@keyframes img-in {
+	0% {
+		opacity: 0;
+		left: 300px;
+		top: 30px;
+	}
+	100% {
+		opacity: 1;
+		left: 30px;
+		top: 10px;
+	}
+}
+
+@keyframes hi-in {
+	to {
+		opacity: 1;
+		font-size: 50px;
+	}
+}
+@keyframes down {
+	from {
+		opacity: 1;
+		top: 50px;
+	}
+	to {
+		opacity: 1;
+		top: 300px;
+	}
+}
+@keyframes want-up {
+	from {
+		opacity: 1;
+		top:30px;
+	}
+	to {
+		opacity: 1;
+		top: -100px;
+	}
+}
+
+@keyframes simple-fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes link-bounce {
+	0% {
+		opacity: 1;
+		right: 315px;
+	}
+	12% {
+		opacity: 1;
+		right: 310px;
+	}
+	25% {
+		opacity: 1;
+		right: 315px;
+	}
+	37% {
+		opacity: 1;
+		right: 310px;
+	}
+	50% {
+		opacity: 1;
+		right: 315px;
+	}
+	100% {
+		opacity: 1;
+		right: 315px;
+	}
+}
+
+@keyframes study-rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes study-in {
+	from {
+		font-size: 15px;
+	}
+	to {
+		font-size: 40px;
+	}
+}
+
+
+@keyframes chg-bg {
+	to {
+		background: url("../img/cs-general.jpg");
+		background-size: cover;
+	}
+
+}
+
+@keyframes unitec-down {
+	from {
+		top: -10px;
+		opacity: 0;
+	}
+	to {
+		top: 25px;
+		opacity: 1;
+	}
+}
+
+@keyframes dep-color {
+	from {
+		color: #063E5E;
+	}
+	to {
+		color: #FF2602;
+	};
+}
+#unitec-ad {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 200px;
+	/*background: linear-gradient(lightgrey, grey, lightgrey);*/
+	/*background: radial-gradient(farthest-side at 50% 70%, grey, lightgrey);*/
+	background-color: rgba(200,200,200,0.6);
+	margin-bottom: 10px;
+	padding-left: 0px;
+	border-radius: 7px;
+	/*background-blend-mode: multiply;*/
+}
+
+#hand, #hi, #enroll, #name-unitec, 
+#study, #study-bg, #want, #unitec-logo, 
+#at-unitec, #name-unitec, #dep {
+	position: absolute;
+	opacity: 0;
+}
+#hand {
+	left: 300px;
+	height: 200px;
+	top: 30px;
+	animation: 0.7s 0.5s forwards ease-out img-in, 0.5s 3s forwards ease-in down;
+}
+
+#hi {
+	left: 300px;
+	top: 50px;
+	font-size: 20px;
+	font-family: 'Arial', sans-serif;
+	color: white;
+	animation: 0.7s 0.7s forwards ease-out hi-in, 0.5s 3s forwards ease-in down;
+}
+
+#want {
+	font-family: 'Arial', sans-serif;
+	animation: 0.9s 3.4s forwards ease-out hi-in, 0.5s 5.5s forwards ease-in want-up;
+	opacity: 0;
+	right: 20px;
+	top:30px;
+}
+
+#enroll {
+	display: block;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #222681;
+	weight: bold;
+	font-family: Impact, Charcoal, sans-serif;
+	padding: 10px;
+	top: 100px;
+	width: 100px;
+	background-color: #C80C0C;
+	animation: 1.5s 10.5s forwards infinite link-bounce;
+}
+
+#name-unitec {
+	bottom: 0;
+	right: 0;
+}
+
+#study-bg {
+	width: 100%;
+	animation: 0.4s 6s forwards reverse simple-fade-out, 0.3s 8.5s forwards simple-fade-out;
+}
+
+#study {
+	font-family: Impact, Charcoal, sans-serif;	
+	color: white;
+	font-size: 15px;
+	left: 20px;
+	top: 30px;
+	animation: 0.4s 6.3s 3 forwards reverse study-rotate, 
+	1.2s 6.3s forwards reverse simple-fade-out, 1.2s 6.3s forwards study-in, 
+	0.3s 8.5s forwards simple-fade-out;
+}
+
+#at-unitec {
+	top: -40px;
+	left: 220px;
+	font-size: 60px;
+	color: #1177b2;
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+	animation: 0.4s 8.8s forwards unitec-down;
+}
+#unitec-logo
+{
+	left: 20px;
+	height: 150px;
+	top: -40px;
+	animation: 0.4s 8.8s forwards unitec-down;
+}
+
+#name-unitec
+{
+	right: 20px;
+	top: 170px;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	color: green;
+	animation: 0.4s 11s forwards reverse simple-fade-out;*/
+}
+#dep {
+	top: 100px;
+	left: 220px;
+	font-size: 30px;
+	color: #063E5E;
+	font-family: 'Arial', sans-serif;
+	animation: 0.4s 8.8s forwards reverse simple-fade-out, 3s 9.8s 3 dep-color;
+}

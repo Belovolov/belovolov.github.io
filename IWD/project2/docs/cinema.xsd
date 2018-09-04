@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="cinema">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="florence">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="row" maxOccurs="unbounded" type="rowType"/>
+            </xs:sequence>  
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ronald">
+          <xs:complexType>
+            <xs:sequence>  
+              <xs:element name="row" maxOccurs="unbounded" type="rowType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="rowType">
+    <xs:sequence>
+      <xs:element name="cost">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="seat" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Vacant"/>
+            <xs:enumeration value="Empty"/>
+            <xs:enumeration value="Booked"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

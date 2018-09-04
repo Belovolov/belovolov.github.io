@@ -1,0 +1,22 @@
+body {
+  	background-color: grey;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+}
+#calculation {
+	/*background-color: lightcoral;*/
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#calculation input[type="radio"] {
+	height: 25px;
+	width: 25px;
+}
+
+.myyellow {
+	height: 32px;
+	width: 70px;
+	background-color: yellow;
+	border-radius: 10px;
+}

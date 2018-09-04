@@ -1,0 +1,142 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shop</title>
+</head>
+<body>
+	
+	<h1>Shop</h1>
+	<button id="display-all" type="button">Display all products</button>
+	<table border="1" id="disp-product" style="visibility: hidden;">
+	</table>
+	<button type="button" id="calculate-cost" style="visibility: hidden;">Calculate Total</button>
+	<p id="calcost"></p>
+
+	
+	<script>
+		document.getElementById('display-all').onclick = showProducts;
+		document.getElementById('calculate-cost').onclick = calculateCost;
+		function Product(productName, price, image) {
+    				this.productName = productName;
+   					this.price = price;
+    				this.image = image;     				
+		}
+		var products=[];		
+		/*products.push(new Product('milk', 5, 'milk.jpg')) ;
+		products.push(new Product('cornflake', 10,'cornflake.jpg' ));
+		products.push(new Product('soda', 2, 'soda.jpg'));
+		products.push(new Product('bread', 8, 'bread.jpg'));
+		products.push(new Product('butter', 2,'butter.jpg'));
+		products.push(new Product('agria potatoes', 20,'agria_potatoes.jpg'));*/
+		
+		if (window.XMLHttpRequest) {   // code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		}
+		else {                                 // code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","product_list.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML; 
+		var x=xmlDoc.getElementsByTagName("Product");
+		
+		var pName ='';
+		var pProce=0;
+		var pImage='';
+		for (var i=0; i < x.length; i++) {
+			pName = x[i].getElementsByTagName("ProductName")[0].childNodes[0].nodeValue;
+			pPrice = Number(x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue);
+			pImage = x[i].getElementsByTagName("Image")[0].childNodes[0].nodeValue;
+			var prod = new Product(pName, pPrice, pImage);
+			products[i] = prod;
+		}
+
+		
+		/*for (var i=0; i< products.length; i++) {
+				for (var j=0; j< Object.keys(products[i]).length; j++) {
+					window.console.log(Object.entries(products[i])[j][1]);
+				}
+			}*/
+		
+		function showProducts() {
+		
+			var table = document.getElementById("disp-product");
+			
+			var cell;
+				for (var i=0; i< products.length; i++) {
+					row = table.insertRow(i);
+					for (var j=0; j< Object.keys(products[i]).length; j++) {					
+						cell = row.insertCell(j);
+						var currentItem = Object.entries(products[i])[j];
+						var text;
+						switch (currentItem[0]) {							
+							case "price":
+								text = "$" + currentItem[1];
+								break;
+							case "image":
+								text = '<img src="images/' + currentItem[1] + '" />'
+								break;
+							default:
+								text = currentItem[1];
+								break;	
+						}
+						cell.innerHTML = text;
+					}
+					var cellLast = row.insertCell(Object.keys(products[i]).length);
+					cellLast.setAttribute("name",'s'+i);
+					
+					var cellQuantity = row.insertCell(Object.keys(products[i]).length + 1);
+					cellQuantity.setAttribute("id","cell-quantity"+i);	
+					
+					var checkBox = document.createElement("input");
+					var cbxName = 'ch' + i;
+					checkBox.setAttribute("type", "checkbox");
+					checkBox.setAttribute("name", cbxName);
+					checkBox.setAttribute("id", cbxName);
+					checkBox.setAttribute("value", products[i].price);
+					checkBox.onchange=checkedBox;
+					checkBox.checked = false;
+					
+					var textBox = document.createElement("input");
+					var txtName = 'cell-quantity-value' + i;
+					textBox.setAttribute("type", "number");
+					textBox.setAttribute("name", txtName);
+					textBox.setAttribute("id", txtName);
+					textBox.setAttribute("value", 0);
+					
+					cellLast.appendChild(checkBox);
+					cellQuantity.appendChild(textBox);
+				}
+			table.style.visibility = "visible";
+			document.getElementById('display-all').onclick = null;
+			document.getElementById('calculate-cost').style.visibility = "visible";
+		}
+		
+		function calculateCost () {
+			var total = 0;
+			var element;
+			var quantity;
+			for (var i=0; i<products.length; i++) {
+				element = document.getElementById('ch'+i);
+				quantity = document.getElementById('cell-quantity-value'+i).value;
+				if ((element.checked == true) && (quantity>0)) total += parseInt(element.value)*parseInt(quantity);
+			}
+			document.getElementById('calcost').innerHTML = total;
+		}
+		
+		
+		function checkedBox () {
+			number = this.id.match(/(\d+)/)[0];
+			textField = document.getElementById('cell-quantity-value'+number);
+			
+			if (this.checked == true) {
+				textField.value = 1;
+			}
+			else {
+				textField.value = 0;
+			}
+			
+		}
+	</script>
+</body>
+</html>

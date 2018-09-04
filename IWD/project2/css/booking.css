@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.content {
+	width: auto;
+	max-width: 500px;
+	margin: 30px auto 10px auto;
+	font-family: "Raleway",sans-serif;
+	text-transform: none;
+}
+select#hall-value {
+	width: 200px;
+	font-size: 20px;
+	height: 30px;
+	background: transparent;
+    border: none;
+    background-color: rgb(237,237,237);
+}
+#curtain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	visibility: hidden;
+}
+#message {
+	position: absolute;
+	visibility: hidden;
+	padding: 10px;
+	width: 40%;
+	top: 35%;
+	left: 30%;
+	background-color: rgba(255,255,255,0.7);
+}
+
+#message ul {
+	padding-left: 30px;
+}
+
+.text {
+	padding: 0px 40px 0px 10px;
+	line-height: 30px;
+}
+#close {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 30px;
+	font-size: 40px;
+	float: right;	
+}
+button {	
+	height: 30px;
+	border: none;
+	border-radius: 5px;	
+	font-family: "Raleway";
+	padding: 1%;
+	color: rgb(237,237,237);
+	background-color: rgb(63,81,181);
+}
+
+button#choose-hall {	
+	display: inline-block;
+	position: relative;	
+	top: -3px;
+}
+button#choose-hall:active {
+	top: -2px;
+	box-shadow: 0px 3px 3px rgba(11,43,69); 
+}
+button#book {
+	display: inline-block;
+	position: relative;
+	font-weight: bold;
+}
+button#book:active {
+	top: 1px;
+	box-shadow: 0px 3px 3px rgba(11,43,69);
+}
+
+.button--disabled {
+	background-color: #7D7D7F;
+	color: rgb(180,180,180);
+}
+#custom-tooltip {
+	content: ' ';
+	position: absolute;
+	background-color: rgba(237,237,237,0.9);
+	border-radius: 2px;
+	padding: 5px;
+	display: none;
+}
+
+
+g.vacant-seat circle {
+	fill: #4480DA;
+}
+g.vacant-seat text {
+	visibility: hidden;
+}
+g.booked-seat circle {
+	fill: grey;
+	storke-width: 5;
+}
+g.booked-seat text {
+	visibility: hidden;
+}
+g.selected-seat circle {
+	fill: #0458D7;
+	stroke-width: 3;
+}
+g.selected-seat text {
+	fill: white;
+	font-weight: bold;
+}
+g {
+	cursor: pointer;
+	text-anchor: middle;
+}
+
+svg text {
+	font-family: "Verdana";
+	font-size: 15px;
+	fill: black;
+}
+
+#hall-selection {
+	margin-bottom: 20px;
+	position: relative;
+	left: 14%;
+}
+
+#receipt {
+	margin-top: 2%;
+	position: relative;
+	visibility: hidden;
+	left: 40%;
+}

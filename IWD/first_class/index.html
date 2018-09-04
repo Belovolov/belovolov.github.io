@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belovolov's Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+	<div id="button-exercise">
+		<h1>Button exercise</h1>
+		<button type="button" onclick="myAction()">Enter</button>
+		<p id="myDisplay"></p><br/>
+	</div>	
+	
+	<div id="textboxes">
+		<h1>Text box exercise</h1>
+		<input id="username" type="text"><br/>
+		<input id="age" type="number"><br/>
+		<button type="button" onclick="myDisplay()">Enter</button>
+	</div>	
+	
+	<div id="checkboxes">
+		<h1>Radio box exercise</h1>
+		<input type="radio" name="myColor"  checked id="myRed" onclick="myColour()"> Red<br>
+		<input type="radio" name="myColor"  id="myBlue" onclick="myColour()"> Blue<br>
+	</div>
+
+	<a href="../index.html">Go back home</a>
+	<script>
+		function myAction() {
+			document.getElementById("myDisplay").innerHTML= 'Hello' ;
+		}
+		function myDisplay () {
+			var mytext;
+			var myage;
+    		// Get the value of the input field with id="username"
+   			mytext = document.getElementById("username").value;
+			// Get the value of the input field with id="age"
+   			myage = document.getElementById("age").value;
+    		document.getElementById("myDisplay").innerHTML= 'Hello ' + mytext + ', your age is ' + myage;
+		}
+		function myColour() {
+			if (document.getElementById("myRed").checked){
+				document.getElementById("checkboxes").style.backgroundColor = "red";
+			} else {
+				document.getElementById("checkboxes").style.backgroundColor = "blue";
+			}
+		}
+	</script>
+
+	
+<body>
+</body>
+</html>

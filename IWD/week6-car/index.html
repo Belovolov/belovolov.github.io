@@ -1,0 +1,112 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>canvas Example Move</title> 
+</head>	
+<body >
+<section style="border-style: solid; border-width: 2px; width: 700px;">
+  <canvas id="mycanvas" width="700" height="400" tabindex="0" >Canvas tag not supported
+  </canvas>  
+</section>
+<button id="start" style="width: 700px; height: 40px; background-color: grey;">Start</button><br>
+<a href="../workbook.html">Go back</a>
+
+	<script>
+		var currentInterval
+
+		document.getElementById("start").onclick = function() {
+			clearInterval(currentInterval)
+			var ctx=document.getElementById("mycanvas").getContext("2d");
+			var x = -200
+			var dx = 4
+			var y = 100	
+			var angle = Math.random()*2*Math.PI
+			var dangle = 0.06*Math.PI
+			//drawCar(ctx, 200, x,y,0)	
+			currentInterval = window.setInterval(function() {
+				drawCar(ctx,200, x, y, angle)
+				x+=dx
+				angle+=dangle
+			}, 40);
+		}
+
+		function drawCar(cont, size, x, y, angle) {
+			let wheelSize = size*0.1
+			let carHeight = size*0.35
+			let wheel1X = x+size-size*0.05-wheelSize*1.2
+			let wheelY = y+carHeight*0.6
+			let wheel2X = x+size-size*0.65-wheelSize*1.2
+			cont.clearRect(0,0,700,400)
+			cont.beginPath();
+			cont.lineWidth = 2
+			cont.moveTo(x,y);
+			cont.lineTo(x+size/2,y)
+			cont.lineTo(x+size/2, y-carHeight/2)
+			cont.lineTo(x+size/2+size/5, y-carHeight/2)
+			cont.arc(x+size/2+size/5, y-carHeight/2+20, 20, 1.5*Math.PI, 1.85*Math.PI)
+			cont.lineTo(x+size/2+size*0.35, y)
+			cont.lineTo(x+size, y)
+			cont.arc(x+size, y+20, 20, 1.5*Math.PI, 1.85*Math.PI)
+			cont.lineTo(x+size+size*0.12, y+carHeight*0.6)
+			cont.lineTo(x+size-size*0.05, y+carHeight*0.6)
+			cont.arc(wheel1X, wheelY,wheelSize*1.2,0,Math.PI, true);
+			cont.lineTo(x+size-size*0.65, y+carHeight*0.6);
+			cont.arc(wheel2X, wheelY, wheelSize*1.2,0,Math.PI, true);
+			cont.lineTo(x, y+carHeight*0.6)
+			cont.lineTo(x, y)
+			cont.fillStyle = "rgb(180,34,18)";
+			cont.fill();
+
+			//draw window
+			cont.beginPath()
+			cont.moveTo(x+size/2+5,y-1)
+			cont.lineTo(x+size/2+5, y-carHeight/2+5)
+			cont.lineTo(x+size/2+size/5-3, y-carHeight/2+5)
+			cont.arc(x+size/2+size/5-2, y-carHeight/2+22, 17, 1.5*Math.PI, 1.85*Math.PI)
+			cont.lineTo(x+size/2+size*0.35-8, y-1)
+			cont.lineTo(x+size/2+5, y-1)
+			cont.fillStyle = "black"
+			cont.stroke();
+			cont.fill()
+
+			cont.beginPath();
+			cont.lineWidth=5
+			cont.arc(wheel1X, wheelY,wheelSize,0,2*Math.PI, true);	
+			cont.fillStyle = "green"
+			cont.strokeStyle = "black"
+			cont.fill();	
+			cont.stroke()	
+
+			cont.beginPath();
+			cont.lineWidth=5
+			cont.moveTo(wheel1X, wheelY);
+			cont.lineTo(wheel1X+wheelSize*Math.cos(angle), wheelY + wheelSize*Math.sin(angle));
+			cont.moveTo(wheel1X, wheelY);
+			cont.lineTo(wheel1X+wheelSize*Math.cos(angle+2*Math.PI/3), wheelY + wheelSize*Math.sin(angle+2*Math.PI/3));
+			cont.moveTo(wheel1X, wheelY);
+			cont.lineTo(wheel1X+wheelSize*Math.cos(angle + 4*Math.PI/3), wheelY + wheelSize*Math.sin(angle+4*Math.PI/3));
+			cont.stroke();
+
+			cont.beginPath();
+			cont.lineWidth=5			
+			cont.arc(wheel2X, wheelY,wheelSize,0,2*Math.PI, true);
+			cont.fillStyle = "green";
+			cont.strokeStyle = "black"
+			cont.fill();		
+			cont.stroke()	
+
+			cont.beginPath();
+			cont.lineWidth=5
+			cont.moveTo(wheel2X, wheelY);
+			cont.lineTo(wheel2X+wheelSize*Math.cos(angle), wheelY+wheelSize*Math.sin(angle));
+			cont.moveTo(wheel2X, wheelY);
+			cont.lineTo(wheel2X+wheelSize*Math.cos(angle+2*Math.PI/3), wheelY + wheelSize*Math.sin(angle+2*Math.PI/3));
+			cont.moveTo(wheel2X, wheelY);
+			cont.lineTo(wheel2X+wheelSize*Math.cos(angle + 4*Math.PI/3), wheelY + wheelSize*Math.sin(angle+4*Math.PI/3));
+			cont.stroke();
+		}
+	</script>
+	
+</body>
+</html>

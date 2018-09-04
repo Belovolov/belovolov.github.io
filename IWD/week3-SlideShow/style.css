@@ -1,0 +1,16 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+	background-color: #E6EAE7;
+	width: auto;
+	margin: 0 20vw 20px 20vw;
+}
+#images {
+	float:center;
+}
+button {
+	height: 50px;
+	width: 100px
+}

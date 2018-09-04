@@ -1,0 +1,56 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+	<title>Cinema bookings</title>
+	<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/tooltipster/dist/css/tooltipster.bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="libs/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css"/>	
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="css/booking.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+	<header>
+    	<h1>Milford Bay Cinema</h1>
+    	<nav>
+        <a href="index.html"><i class="fa fa-film" aria-hidden="true"></i> Book Movie</a>
+        <a href="canvas.html"><i class="fa fa-gamepad" aria-hidden="true"></i> Play Game</a>
+        <a href="documentation.html"><i class="fa fa-book" aria-hidden="true"></i> Documentation</a>
+      </nav>
+	</header>
+	<section class="content">
+    	<div id="hall-selection">
+			<label for="hall-value">Choose hall:</label>
+			<select id="hall-value" name="hall">
+				  <option value="florence">Florence hall</option>
+				  <option value="ronald">Ronalds hall</option>
+			</select>
+			<button id="choose-hall">Load layout</button>
+		</div>
+		
+		<div id="layout" >
+			<svg id="layout_svg" width="500px" height="300px"></svg>
+		</div>
+		<div id="receipt">
+			<p>You pay: <span id="cost">0</span>$</p>
+			<button id="book" class="button--disabled">Book tickets</button>			
+		</div>
+		<!-- Modal -->
+		<div id="curtain"></div>
+		<div id="message">
+			<div class="text"></div>			
+			<img id="close" src="img/close.png" alt="">
+		</div>
+		<div id="custom-tooltip">
+			
+		</div>
+
+  	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+	<script src="js/booking.js"></script>
+</body>
+</html>
+
+

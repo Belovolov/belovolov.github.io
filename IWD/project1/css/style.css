@@ -1,0 +1,139 @@
+body {
+  width: 1050px;
+  margin: 2% 6% 0 6%;
+  background-color: rgba(100,100,100,0.7);
+  background-blend-mode: multiply;
+  background-image: url("../img/Central_Tian_Shan_mountains.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav .menubar {
+  width: 61%;
+  heigth: 20px;
+  background-color: #1177b2;
+  float: left;
+  margin-left: 0;
+  border-radius: 7px;
+}
+
+ul.menu {
+  float: left;
+  padding-left: 7px;
+}
+
+ul.menu li {
+  float: left;
+  padding: 0 0 0 5px;
+  list-style: none;
+  border-right: solid 2px #01273d;
+}
+
+ul.menu li:last-child {
+  border-right: none;
+}
+
+ul.menu li a {
+  font: normal 100%  'Raleway','trebuchet ms', sans-serif;
+  font-size: 15px;
+  display: block;
+  height: 20px;
+  padding: 4px 15px 4px 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.menu li.selected a {
+  color: #aeb002;
+}
+
+ul.menu li a:hover {
+  color: #e5dc14;
+}
+
+.tutorial-content {
+  width: 58%;
+  float: left;
+  margin-top: 10px;
+  background-color: rgba(135, 211, 182, 0.6);
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.tutorial-content img {
+  width: 550px;
+}
+
+.tutorial-content li {
+  margin-bottom: 15px;
+}
+
+.test-area {
+  background-color: #92cc7c;
+  line-height: 1.5;
+  padding: 5px;
+  border: 1px dashed black;
+  border-radius: 10px;
+}
+
+#test-check-box {
+  text-align: center;
+}
+
+.goback {
+  display: block;
+  float: left;
+  clear: both;
+  font-size: 30px;
+  padding: 5px;
+  font-family: 'Permanent Marker', monospace;
+}
+
+input[type="number"] {
+  height: 30px;
+}
+
+input[type="radio"] {
+  margin-lright: 10px;
+}
+
+p.wish {
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-style: cursive;
+}
+
+#sidebar {
+  float: right;
+}
+#storyboards {
+  float: right;
+  clear: both;
+  width: 380px;
+  border-radius: 5px;
+  background-color: rgba(94, 119, 158, 0.5);
+  margin-top: 10px;
+  padding: 0 10px 0 10px  ;
+}
+
+#storyboards a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  color: lightgrey;
+}
+#storyboards a:hover {
+  
+  color: white;
+}
+
+#storyboards ul {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+#storyboards ul li {
+  padding: 5px;
+  color: white;
+}

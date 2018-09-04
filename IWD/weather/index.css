@@ -1,0 +1,67 @@
+body {
+	margin: 0 auto;
+	text-align: center;
+    width: 50%;
+	background: #e55d87; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e55d87, #5fc3e4); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e55d87, #5fc3e4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.body--night {
+    background: #614385;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.body--day {
+	background: #f09819; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f09819, #edde5d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f09819, #edde5d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+	display: none;
+	color: #222;
+}
+
+
+.fa-location-arrow {
+	color: #222;
+}
+
+#data {
+	height: 100px;
+	line-height: 100px;
+}
+header {
+    font-family: 'Verdana';
+    font-size: 20px;
+    margin-bottom: 20vh;
+}
+#text-info {
+	font-size: 1.1em;
+}
+#text-info p {
+	margin: 0;
+	text-align: left;
+}
+#weather-icon {
+	height: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#notation, #temp{
+	vertical-align: middle;
+	font-size: 40px;
+	display: inline-block;
+}
+#notation {
+	cursor: pointer;
+}
+
+#text-info {
+	margin-left: 20px;
+	vertical-align: middle;
+	line-height: 20px;
+	display: inline-block;
+}
+

@@ -1,0 +1,99 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+	/*background-color: #E6EAE7;*/
+	background: linear-gradient(to bottom, #E6EAE7,#8DA594);
+	background-attachment: fixed;
+	width: auto;
+	margin: 0 10% 20px 10%;
+}
+
+header h1 {
+	margin-bottom: 5px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 3vw;
+}
+
+header h4 {
+	margin-top: 5px;
+	position: 10px 30px;
+}
+
+header {
+	/*background-color: #AFC3F1;*/
+	padding: 2% 2% 3% 2%;
+	color: #024F61;
+}
+
+#graphics {
+	animation-name: logo-side-move;
+	animation-duration: 1.5s;
+	position: relative;
+}
+#graphics img {
+	max-width: 100%;
+}
+#welcome {
+	animation-name: welcome;
+	animation-duration: 4s;
+	margin-bottom: 2%;
+}
+#author {	
+	animation-name: author;
+	animation-duration: 6s;
+	font-weight: bold;
+	text-align: right;
+	font-family: 'Sedgwick Ave', cursive;
+	padding-right: 10%;
+}
+nav {
+	/*background-color: #9CBBCD;*/
+	background-color: rgba(156,187,205,0.5);
+	clear: both;
+}
+
+nav li {
+	font-size: 1.5em;
+}
+
+main {
+	margin-bottom: 30px;
+	padding: 0% 2% 0% 2%;
+}
+
+footer {
+	text-align: center;
+	font-size: 80%;
+	background-color: #CAD4DA;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.week-header {
+	/*background-color: #C4D9C3;*/
+	/*background-color: rgba(99, 49, 102,0.3);*/
+	/*border: 2px dashed rgba(13,167,194,0.5);*/
+	background-color: rgba(13,167,194,0.2);
+	line-height: 2;
+	border-radius: 15px;
+	padding: 5px;
+	font-family: "Raleway", sans-serif;
+	font-size: 1.4em;
+	margin: 1% 0 1% 0;
+	padding-left: 20px;
+}
+.week-header:hover {
+	/*background-color: #AFD6A3;*/
+	background-color: rgba(13,167,194,0.6);
+	cursor:pointer;
+}
+.project-list {
+	margin-top: 5px;
+}

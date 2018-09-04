@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belovolov's Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+	<div id="calculation">
+		<h1>Calculation</h1>
+		<input type="radio" name="myColor"  checked id="plus">Plus<br>
+		<input type="radio" name="myColor"  id="minus">Minus<br>
+		<input id="amount" type="number" class="myyellow">
+		<button type="button" onclick="calculate()" class="myyellow">Total</button></br>
+		<p id="totalValue"></p>
+	</div>
+	
+
+	<a href="../index.html">Go back home</a>
+	<script>
+		document.amount = 0;
+		function calculate() {
+			var currentAmount = parseInt(document.getElementById("amount").value);
+			if (currentAmount) {
+				if (document.getElementById("plus").checked) {
+					document.amount+=currentAmount;
+				}
+				else {
+					document.amount-=currentAmount;
+				}
+				document.getElementById("totalValue").innerHTML = document.amount;
+			}
+			
+		}
+	</script>		
+	
+<body>
+</body>
+</html>

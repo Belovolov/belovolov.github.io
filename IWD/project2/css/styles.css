@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700italic);
+
+* { 
+	padding: 0; 
+	margin: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+	background: #2D587B; 
+	font-family: 'Lato', 
+	sans-serif; 
+	letter-spacing: 1px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    /* height: 50px; */
+    padding: 10px 0 10px 10px;
+    background: #13314D;
+    color: #9CB1BF;
+    text-transform: uppercase; 
+}
+
+header h1 {
+    height: 100%;
+    font-style: italic;
+  	font-weight: 700;
+}
+ 
+header h1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;  
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header nav a {
+	padding: 0 40px 0 0;
+    display: inline-block;
+    color:#9CB1BF;
+    text-decoration:none;
+    cursor: pointer;
+}
+header nav a:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #ffeb3b;
+    transition: width .3s ease-in-out;
+}
+header nav a:hover:after,
+header nav a:focus:after {
+    width: 100%;
+}
+label {
+    color: white;
+}
+.content {
+	width: 912px;
+    margin: 0 auto;
+}
+
+.volume_control {
+    position: absolute;
+    left: 230px;
+    top: 640px;
+}
+
+.volume_control span {
+    font-family: courier;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+}
+
+#link-to-doc {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#link-to-doc a {
+    color: orange;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 970px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1 {
+        margin-bottom: 10px;
+    }
+}
